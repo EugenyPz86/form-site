@@ -1,33 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Форма отчёта по моти</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
+      font-family: sans-serif;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 10px;
+      font-size: 14px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
     label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
+      font-weight: 500;
     }
-    input, select, button {
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .input-row span {
+      min-width: 180px;
+      flex: 1;
+    }
+    .input-row input {
+      width: 80px;
+      padding: 6px;
+    }
+    select, input[type="text"], input[type="date"] {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      box-sizing: border-box;
+      max-width: 300px;
+      padding: 8px;
     }
     button {
       background-color: #28a745;
       color: white;
       font-weight: bold;
       border: none;
-      margin-top: 20px;
+      padding: 10px;
       cursor: pointer;
+      max-width: 200px;
     }
     button:hover {
       background-color: #218838;
@@ -35,9 +53,9 @@
   </style>
 </head>
 <body>
-  <h2>Форма отчёта по производству моти (тест)</h2>
+  <h2>Форма отчёта по производству моти</h2>
 
-<form action="https://script.google.com/macros/s/AKfycbyWFXtn9FTu_mKjkzGP4etcmq_zcRTavvhiJqp_ezMwokvcPwEidbL4xw34WRRaPOHJ/exec" method="POST">
+  <form action="https://script.google.com/macros/s/AKfycbypFSLNdt3eoZPs4NQ8SvBoBWbjQmup066ffE-Imp5cOpTkrm2YCkgBXGPPxsgFdHN-wA/exec" method="POST">
 
     <label>Имя:
       <input type="text" name="Имя" required>
@@ -54,17 +72,30 @@
       </select>
     </label>
 
-    <label>Арбуз - Дыня (Кол-во):
-      <input type="number" name="Арбуз - Дыня" min="0">
-    </label>
+    <h3>Вкусы</h3>
 
-    <label>Арбуз - Дыня (Для себя):
-      <input type="number" name="Арбуз - Дыня для себя" min="0">
-    </label>
-
-    <label>Арбуз - Дыня (Брак):
-      <input type="number" name="Арбуз - Дыня брак" min="0">
-    </label>
+    <!-- ВКУСЫ -->
+    <div class="input-row"><span>Арбуз - Дыня</span><input type="number" name="Арбуз - Дыня"><input type="number" name="Арбуз - Дыня для себя"><input type="number" name="Арбуз - Дыня брак"></div>
+    <div class="input-row"><span>Твикс</span><input type="number" name="Твикс"><input type="number" name="Твикс для себя"><input type="number" name="Твикс брак"></div>
+    <div class="input-row"><span>Бабл Гам</span><input type="number" name="Бабл Гам"><input type="number" name="Бабл Гам для себя"><input type="number" name="Бабл Гам брак"></div>
+    <div class="input-row"><span>Банан-Нутелла</span><input type="number" name="Банан-Нутелла"><input type="number" name="Банан-Нутелла для себя"><input type="number" name="Банан-Нутелла брак"></div>
+    <div class="input-row"><span>Вишня-Тонка</span><input type="number" name="Вишня-Тонка"><input type="number" name="Вишня-Тонка для себя"><input type="number" name="Вишня-Тонка брак"></div>
+    <div class="input-row"><span>Грейпфрут-Гуава</span><input type="number" name="Грейпфрут-Гуава"><input type="number" name="Грейпфрут-Гуава для себя"><input type="number" name="Грейпфрут-Гуава брак"></div>
+    <div class="input-row"><span>Дубайский шоколад</span><input type="number" name="Дубайский шоколад"><input type="number" name="Дубайский шоколад для себя"><input type="number" name="Дубайский шоколад брак"></div>
+    <div class="input-row"><span>Киви-Алоэ</span><input type="number" name="Киви-Алоэ"><input type="number" name="Киви-Алоэ для себя"><input type="number" name="Киви-Алоэ брак"></div>
+    <div class="input-row"><span>Клубника</span><input type="number" name="Клубника"><input type="number" name="Клубника для себя"><input type="number" name="Клубника брак"></div>
+    <div class="input-row"><span>Кокосовый пломбир</span><input type="number" name="Кокосовый пломбир"><input type="number" name="Кокосовый пломбир для себя"><input type="number" name="Кокосовый пломбир брак"></div>
+    <div class="input-row"><span>Кофе-Карамель</span><input type="number" name="Кофе-Карамель"><input type="number" name="Кофе-Карамель для себя"><input type="number" name="Кофе-Карамель брак"></div>
+    <div class="input-row"><span>Кокос-Маракуйя</span><input type="number" name="Кокос-Маракуйя"><input type="number" name="Кокос-Маракуйя для себя"><input type="number" name="Кокос-Маракуйя брак"></div>
+    <div class="input-row"><span>Сливочный лимон</span><input type="number" name="Сливочный лимон"><input type="number" name="Сливочный лимон для себя"><input type="number" name="Сливочный лимон брак"></div>
+    <div class="input-row"><span>Малина-Ваниль</span><input type="number" name="Малина-Ваниль"><input type="number" name="Малина-Ваниль для себя"><input type="number" name="Малина-Ваниль брак"></div>
+    <div class="input-row"><span>Матча-Манго</span><input type="number" name="Матча-Манго"><input type="number" name="Матча-Манго для себя"><input type="number" name="Матча-Манго брак"></div>
+    <div class="input-row"><span>Мохито</span><input type="number" name="Мохито"><input type="number" name="Мохито для себя"><input type="number" name="Мохито брак"></div>
+    <div class="input-row"><span>Печенье с топлёным молоком</span><input type="number" name="Печенье с топлёным молоком"><input type="number" name="Печенье с топлёным молоком для себя"><input type="number" name="Печенье с топлёным молоком брак"></div>
+    <div class="input-row"><span>Смородина</span><input type="number" name="Смородина"><input type="number" name="Смородина для себя"><input type="number" name="Смородина брак"></div>
+    <div class="input-row"><span>Сникерс</span><input type="number" name="Сникерс"><input type="number" name="Сникерс для себя"><input type="number" name="Сникерс брак"></div>
+    <div class="input-row"><span>Трюфель</span><input type="number" name="Трюфель"><input type="number" name="Трюфель для себя"><input type="number" name="Трюфель брак"></div>
+    <div class="input-row"><span>Шоколад</span><input type="number" name="Шоколад"><input type="number" name="Шоколад для себя"><input type="number" name="Шоколад брак"></div>
 
     <button type="submit">Отправить</button>
   </form>

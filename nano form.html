@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по производству моти</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 30px auto; padding: 20px; }
+    input, select, button { width: 100%; margin-top: 10px; padding: 10px; box-sizing: border-box; }
+    .flavor-block { border-top: 1px solid #ccc; margin-top: 20px; padding-top: 10px; }
+    .flavor-block label { display: block; margin-bottom: 5px; font-weight: bold; }
+    button { background-color: #28a745; color: white; border: none; font-weight: bold; cursor: pointer; }
+    button:hover { background-color: #218838; }
+  </style>
+</head>
+<body>
+  <h2>Форма отчёта по производству моти</h2>
+
+  <form action="https://script.google.com/macros/s/AKfycbygHBp5bgLh6VWLVmrsxiYtThMtaeEv75eK1yjVJm7RXzS8M23qII2WWM7Xvz-tu55IGg/exec" method="POST">
+    
+    <label>Имя:
+      <input type="text" name="Имя" required>
+    </label>
+    <label>Дата:
+      <input type="date" name="Дата" required>
+    </label>
+    <label>Вид производства:
+      <select name="Вид производства" required>
+        <option value="Лепка">Лепка</option>
+        <option value="Начинка">Начинка</option>
+      </select>
+    </label>
+
+    <h3>Вкусы</h3>
+
+    <div class="flavor-block">
+      <label>Арбуз - Дыня (Кол-во): <input type="number" name="Арбуз - Дыня"></label>
+      <label>Арбуз - Дыня (Для себя): <input type="number" name="Арбуз - Дыня для себя"></label>
+      <label>Арбуз - Дыня (Брак): <input type="number" name="Арбуз - Дыня брак"></label>
+    </div>
+
+    <!-- Хочешь — я сгенерирую автоматически все 21 вкус -->
+
+    <button type="submit">Отправить</button>
+  </form>
+</body>
+</html>

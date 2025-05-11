@@ -40,9 +40,13 @@
       box-sizing: border-box;
       margin-top: 5px;
     }
+    .table-header, .input-row {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      align-items: center;
+      gap: 10px;
+    }
     .table-header {
-      display: flex;
-      justify-content: space-between;
       font-weight: bold;
       margin-top: 25px;
       padding-bottom: 5px;
@@ -50,19 +54,12 @@
       color: #2d7a44;
     }
     .input-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 8px 0;
-      flex-wrap: wrap;
-    }
-    .input-row span {
-      min-width: 180px;
-      flex: 1;
+      margin: 6px 0;
     }
     .input-row input {
-      width: 70px;
+      width: 100%;
       padding: 6px;
+      box-sizing: border-box;
     }
     button {
       margin-top: 30px;
@@ -100,34 +97,34 @@
     </label>
 
     <div class="table-header">
-      <span style="flex:1">🍡 Вкус</span>
-      <span>Кол-во</span>
-      <span>Для себя</span>
-      <span>Брак</span>
+      <div>🍡 Вкус</div>
+      <div>Кол-во</div>
+      <div>Для себя</div>
+      <div>Брак</div>
     </div>
 
     <!-- Список вкусов -->
-    <div class="input-row"><span>Арбуз - Дыня</span><input name="Арбуз - Дыня"><input name="Арбуз - Дыня для себя"><input name="Арбуз - Дыня брак"></div>
-    <div class="input-row"><span>Твикс</span><input name="Твикс"><input name="Твикс для себя"><input name="Твикс брак"></div>
-    <div class="input-row"><span>Бабл Гам</span><input name="Бабл Гам"><input name="Бабл Гам для себя"><input name="Бабл Гам брак"></div>
-    <div class="input-row"><span>Банан-Нутелла</span><input name="Банан-Нутелла"><input name="Банан-Нутелла для себя"><input name="Банан-Нутелла брак"></div>
-    <div class="input-row"><span>Вишня-Тонка</span><input name="Вишня-Тонка"><input name="Вишня-Тонка для себя"><input name="Вишня-Тонка брак"></div>
-    <div class="input-row"><span>Грейпфрут-Гуава</span><input name="Грейпфрут-Гуава"><input name="Грейпфрут-Гуава для себя"><input name="Грейпфрут-Гуава брак"></div>
-    <div class="input-row"><span>Дубайский шоколад</span><input name="Дубайский шоколад"><input name="Дубайский шоколад для себя"><input name="Дубайский шоколад брак"></div>
-    <div class="input-row"><span>Киви-Алоэ</span><input name="Киви-Алоэ"><input name="Киви-Алоэ для себя"><input name="Киви-Алоэ брак"></div>
-    <div class="input-row"><span>Клубника</span><input name="Клубника"><input name="Клубника для себя"><input name="Клубника брак"></div>
-    <div class="input-row"><span>Кокосовый пломбир</span><input name="Кокосовый пломбир"><input name="Кокосовый пломбир для себя"><input name="Кокосовый пломбир брак"></div>
-    <div class="input-row"><span>Кофе-Карамель</span><input name="Кофе-Карамель"><input name="Кофе-Карамель для себя"><input name="Кофе-Карамель брак"></div>
-    <div class="input-row"><span>Кокос-Маракуйя</span><input name="Кокос-Маракуйя"><input name="Кокос-Маракуйя для себя"><input name="Кокос-Маракуйя брак"></div>
-    <div class="input-row"><span>Сливочный лимон</span><input name="Сливочный лимон"><input name="Сливочный лимон для себя"><input name="Сливочный лимон брак"></div>
-    <div class="input-row"><span>Малина-Ваниль</span><input name="Малина-Ваниль"><input name="Малина-Ваниль для себя"><input name="Малина-Ваниль брак"></div>
-    <div class="input-row"><span>Матча-Манго</span><input name="Матча-Манго"><input name="Матча-Манго для себя"><input name="Матча-Манго брак"></div>
-    <div class="input-row"><span>Мохито</span><input name="Мохито"><input name="Мохито для себя"><input name="Мохито брак"></div>
-    <div class="input-row"><span>Печенье с топлёным молоком</span><input name="Печенье с топлёным молоком"><input name="Печенье с топлёным молоком для себя"><input name="Печенье с топлёным молоком брак"></div>
-    <div class="input-row"><span>Смородина</span><input name="Смородина"><input name="Смородина для себя"><input name="Смородина брак"></div>
-    <div class="input-row"><span>Сникерс</span><input name="Сникерс"><input name="Сникерс для себя"><input name="Сникерс брак"></div>
-    <div class="input-row"><span>Трюфель</span><input name="Трюфель"><input name="Трюфель для себя"><input name="Трюфель брак"></div>
-    <div class="input-row"><span>Шоколад</span><input name="Шоколад"><input name="Шоколад для себя"><input name="Шоколад брак"></div>
+    <div class="input-row"><div>Арбуз - Дыня</div><input name="Арбуз - Дыня"><input name="Арбуз - Дыня для себя"><input name="Арбуз - Дыня брак"></div>
+    <div class="input-row"><div>Твикс</div><input name="Твикс"><input name="Твикс для себя"><input name="Твикс брак"></div>
+    <div class="input-row"><div>Бабл Гам</div><input name="Бабл Гам"><input name="Бабл Гам для себя"><input name="Бабл Гам брак"></div>
+    <div class="input-row"><div>Банан-Нутелла</div><input name="Банан-Нутелла"><input name="Банан-Нутелла для себя"><input name="Банан-Нутелла брак"></div>
+    <div class="input-row"><div>Вишня-Тонка</div><input name="Вишня-Тонка"><input name="Вишня-Тонка для себя"><input name="Вишня-Тонка брак"></div>
+    <div class="input-row"><div>Грейпфрут-Гуава</div><input name="Грейпфрут-Гуава"><input name="Грейпфрут-Гуава для себя"><input name="Грейпфрут-Гуава брак"></div>
+    <div class="input-row"><div>Дубайский шоколад</div><input name="Дубайский шоколад"><input name="Дубайский шоколад для себя"><input name="Дубайский шоколад брак"></div>
+    <div class="input-row"><div>Киви-Алоэ</div><input name="Киви-Алоэ"><input name="Киви-Алоэ для себя"><input name="Киви-Алоэ брак"></div>
+    <div class="input-row"><div>Клубника</div><input name="Клубника"><input name="Клубника для себя"><input name="Клубника брак"></div>
+    <div class="input-row"><div>Кокосовый пломбир</div><input name="Кокосовый пломбир"><input name="Кокосовый пломбир для себя"><input name="Кокосовый пломбир брак"></div>
+    <div class="input-row"><div>Кофе-Карамель</div><input name="Кофе-Карамель"><input name="Кофе-Карамель для себя"><input name="Кофе-Карамель брак"></div>
+    <div class="input-row"><div>Кокос-Маракуйя</div><input name="Кокос-Маракуйя"><input name="Кокос-Маракуйя для себя"><input name="Кокос-Маракуйя брак"></div>
+    <div class="input-row"><div>Сливочный лимон</div><input name="Сливочный лимон"><input name="Сливочный лимон для себя"><input name="Сливочный лимон брак"></div>
+    <div class="input-row"><div>Малина-Ваниль</div><input name="Малина-Ваниль"><input name="Малина-Ваниль для себя"><input name="Малина-Ваниль брак"></div>
+    <div class="input-row"><div>Матча-Манго</div><input name="Матча-Манго"><input name="Матча-Манго для себя"><input name="Матча-Манго брак"></div>
+    <div class="input-row"><div>Мохито</div><input name="Мохито"><input name="Мохито для себя"><input name="Мохито брак"></div>
+    <div class="input-row"><div>Печенье с топлёным молоком</div><input name="Печенье с топлёным молоком"><input name="Печенье с топлёным молоком для себя"><input name="Печенье с топлёным молоком брак"></div>
+    <div class="input-row"><div>Смородина</div><input name="Смородина"><input name="Смородина для себя"><input name="Смородина брак"></div>
+    <div class="input-row"><div>Сникерс</div><input name="Сникерс"><input name="Сникерс для себя"><input name="Сникерс брак"></div>
+    <div class="input-row"><div>Трюфель</div><input name="Трюфель"><input name="Трюфель для себя"><input name="Трюфель брак"></div>
+    <div class="input-row"><div>Шоколад</div><input name="Шоколад"><input name="Шоколад для себя"><input name="Шоколад брак"></div>
 
     <button type="submit">✅ Отправить отчёт</button>
   </form>

@@ -32,7 +32,7 @@
       margin-right: 8px;
       font-size: 1.2em;
     }
-    input, select {
+    input[type="text"], input[type="date"], select {
       padding: 8px;
       font-size: 14px;
       width: 100%;
@@ -42,7 +42,7 @@
     }
     .table-header, .input-row {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      grid-template-columns: 1.5fr 60px 60px 60px;
       align-items: center;
       gap: 10px;
     }
@@ -57,9 +57,10 @@
       margin: 6px 0;
     }
     .input-row input {
-      width: 100%;
+      width: 60px;
       padding: 6px;
       box-sizing: border-box;
+      text-align: center;
     }
     button {
       margin-top: 30px;
